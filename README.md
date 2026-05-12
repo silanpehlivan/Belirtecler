@@ -1,64 +1,67 @@
-````markdown
+````markdown id="clean_readme_final"
 # 🧩 C# Erişim Belirteçleri (Access Modifiers) Uygulaması
 
-Bu proje, C# programlama dilindeki temel erişim belirteçlerinin (`public`, `private`, `protected`, `internal`, `protected internal`) kullanımını ve farklı senaryolardaki davranışlarını gösteren bir Windows Forms uygulamasıdır.
+Bu proje, C# programlama dilinde kullanılan erişim belirteçlerini (`public`, `private`, `protected`, `internal`, `protected internal`) Windows Forms (WinForms) ortamında örnek bir `Urun` sınıfı üzerinden açıklayan bir uygulamadır.
 
 ---
 
 ## ⚙️ Özellikler
 
-- 🌍 **public:** Her yerden erişilebilir üyeler.
-- 🔒 **private:** Yalnızca tanımlandığı sınıf içinden erişilebilir üyeler.
-- 🧬 **protected:** Tanımlandığı sınıf ve ondan türetilen sınıflar içinden erişilebilir üyeler.
-- 📦 **internal:** Yalnızca aynı derleme (assembly) içinden erişilebilir üyeler.
-- 🔐 **protected internal:** Aynı derleme içinden veya türetilmiş sınıflar üzerinden erişilebilir üyeler.
-- 🧪 **Örnek Uygulama:** `Urun` sınıfı üzerinden erişim belirteçlerinin davranışlarını gösterir.
+- 🌍 **public:** Her yerden erişilebilir üyeler
+- 🔒 **private:** Sadece tanımlandığı sınıf içinden erişilebilir üyeler
+- 🧬 **protected:** Sınıf ve türetilmiş sınıflar tarafından erişilebilir üyeler
+- 📦 **internal:** Aynı proje (assembly) içinden erişilebilir üyeler
+- 🔐 **protected internal:** Aynı assembly içinden veya türetilmiş sınıflardan erişilebilir üyeler
+- 🧪 **Örnek Kullanım:** `Urun` sınıfı üzerinden tüm erişim türleri gösterilmektedir
 
 ---
 
 ## 🛠️ Teknik Detaylar
 
-- 💻 **Dil:** C#
-- 🪟 **Arayüz:** Windows Forms (WinForms)
-- 🧱 **Mimari:** Sınıf yapıları ve nesne yönelimli programlama (OOP)
+- 💻 Dil: C#
+- 🪟 Arayüz: Windows Forms (WinForms)
+- 🧱 Yapı: Nesne Yönelimli Programlama (OOP)
 
 ---
 
 ## 🎯 Kazanımlar
 
-- 🔐 **Kapsülleme (Encapsulation):** Veri gizliliği ve erişim kontrolü
-- 🖥️ **UI & Logic Senkronizasyonu:** Form üzerinden sınıflarla etkileşim
-- 📁 **Proje Yönetimi:** `.sln` ve `.csproj` yapısının kullanımı
+- 🔐 Kapsülleme (Encapsulation) mantığını öğrenme
+- 🧠 Erişim belirteçlerinin farklarını anlama
+- 🖥️ WinForms ile sınıf etkileşimi kurma
+- 📁 .NET proje yapısını tanıma
 
 ---
 
 ## 🚀 Kurulum
 
-Projeyi yerel makinenizde çalıştırmak için:
-
-1. 📥 Depoyu klonlayın veya ZIP olarak indirin:
+1. 📥 Projeyi klonlayın veya indirin:
 
 ```bash
 git clone https://github.com/kullaniciadi/Belirtecler.git
 ````
 
-2. 📂 `Belirtecler-master` klasörüne gidin.
+2. 📂 Proje klasörüne girin:
 
-3. 🧾 `Belirtecler.sln` dosyasını Visual Studio ile açın.
+```
+Belirtecler-master
+```
 
-4. ▶️ Projeyi derleyip çalıştırın.
+3. 🧾 `Belirtecler.sln` dosyasını Visual Studio ile açın
+
+4. ▶️ Projeyi çalıştırın
 
 ---
 
 ## 🖥️ Kullanım
 
-Uygulama, `Form1` üzerinde bir `Urun` nesnesi oluşturur ve erişim belirteçlerinin nasıl çalıştığını gösterir.
+Uygulama çalıştırıldığında `Form1` üzerinde bir `Urun` nesnesi oluşturulur.
 
-Form üzerindeki butonlarla:
+Butonlar aracılığıyla:
 
 * 📦 Ürün bilgileri görüntülenir
 * 💰 Fiyat güncellenir
-* 📊 Stok ve kategori bilgileri düzenlenir
+* 📊 Stok ve kategori işlemleri yapılır
 
 ---
 
@@ -67,18 +70,25 @@ Form üzerindeki butonlarla:
 ```csharp
 public class Urun
 {
-    public string UrunAdi { get; set; }   // 🌍 Public özellik
-    private decimal _fiyat;               // 🔒 Private özellik
-    protected int StokMiktari;           // 🧬 Protected özellik
-    internal string Kategori;            // 📦 Internal özellik
-    protected internal string Uretici;   // 🔐 Protected Internal özellik
+    public string UrunAdi { get; set; }
+    private decimal _fiyat;
+    protected int StokMiktari;
+    internal string Kategori;
+    protected internal string Uretici;
 
     public Urun(string ad, decimal fiyat, string kategori, int stok, string uretici)
     {
-        // constructor
+        UrunAdi = ad;
+        _fiyat = fiyat;
+        Kategori = kategori;
+        StokMiktari = stok;
+        Uretici = uretici;
     }
 
-    private void FiyatGuncelle(decimal yeniFiyat) { }
+    private void FiyatGuncelle(decimal yeniFiyat)
+    {
+        _fiyat = yeniFiyat;
+    }
 
     public string UrunBilgisiGetir()
     {
@@ -107,7 +117,7 @@ public class Urun
 
     public void FiyatGuncellePublic(decimal yeniFiyat)
     {
-        _fiyat = yeniFiyat;
+        FiyatGuncelle(yeniFiyat);
     }
 }
 ```
@@ -118,21 +128,21 @@ public class Urun
 
 ```
 Belirtecler-master/
-├── 📄 Belirtecler.csproj
-├── 📄 Belirtecler.sln
-├── 🪟 Form1.Designer.cs
-├── 🪟 Form1.cs
-├── 🧾 Form1.resx
-├── 📜 LICENSE
-├── 🚀 Program.cs
-└── 📘 README.md
+├── Belirtecler.csproj
+├── Belirtecler.sln
+├── Form1.Designer.cs
+├── Form1.cs
+├── Form1.resx
+├── Program.cs
+├── LICENSE
+└── README.md
 ```
 
 ---
 
 ## 🤝 Katkıda Bulunma
 
-Katkılarınız memnuniyetle karşılanır. Herhangi bir hata bulursanız veya yeni özellik eklemek isterseniz issue açabilir veya pull request gönderebilirsiniz.
+Katkılarınızı memnuniyetle karşılıyoruz. Hata bildirimi veya yeni özellik önerileri için issue açabilir veya pull request gönderebilirsiniz.
 
 ---
 
@@ -140,5 +150,4 @@ Katkılarınız memnuniyetle karşılanır. Herhangi bir hata bulursanız veya y
 
 ⭐ **Şilan Pehlivan**
 
-```
 ```
