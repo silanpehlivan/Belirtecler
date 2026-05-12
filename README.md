@@ -1,4 +1,3 @@
-````markdown id="clean_readme_final"
 # 🧩 C# Erişim Belirteçleri (Access Modifiers) Uygulaması
 
 Bu proje, C# programlama dilinde kullanılan erişim belirteçlerini (`public`, `private`, `protected`, `internal`, `protected internal`) Windows Forms (WinForms) ortamında örnek bir `Urun` sınıfı üzerinden açıklayan bir uygulamadır.
@@ -12,7 +11,7 @@ Bu proje, C# programlama dilinde kullanılan erişim belirteçlerini (`public`, 
 - 🧬 **protected:** Sınıf ve türetilmiş sınıflar tarafından erişilebilir üyeler
 - 📦 **internal:** Aynı proje (assembly) içinden erişilebilir üyeler
 - 🔐 **protected internal:** Aynı assembly içinden veya türetilmiş sınıflardan erişilebilir üyeler
-- 🧪 **Örnek Kullanım:** `Urun` sınıfı üzerinden tüm erişim türleri gösterilmektedir
+- 🧪 **Örnek Kullanım:** `Urun` sınıfı üzerinden erişim belirteçlerinin davranışı gösterilmektedir
 
 ---
 
@@ -27,7 +26,7 @@ Bu proje, C# programlama dilinde kullanılan erişim belirteçlerini (`public`, 
 ## 🎯 Kazanımlar
 
 - 🔐 Kapsülleme (Encapsulation) mantığını öğrenme
-- 🧠 Erişim belirteçlerinin farklarını anlama
+- 🧠 Erişim belirteçlerinin kullanım farklarını anlama
 - 🖥️ WinForms ile sınıf etkileşimi kurma
 - 📁 .NET proje yapısını tanıma
 
@@ -35,119 +34,41 @@ Bu proje, C# programlama dilinde kullanılan erişim belirteçlerini (`public`, 
 
 ## 🚀 Kurulum
 
-1. 📥 Projeyi klonlayın veya indirin:
-
-```bash
-git clone https://github.com/kullaniciadi/Belirtecler.git
-````
-
-2. 📂 Proje klasörüne girin:
-
-```
-Belirtecler-master
-```
-
-3. 🧾 `Belirtecler.sln` dosyasını Visual Studio ile açın
-
-4. ▶️ Projeyi çalıştırın
+1. 📥 Projeyi klonlayın veya ZIP olarak indirin  
+2. 📂 Proje klasörüne girin  
+3. 🧾 Visual Studio ile `.sln` dosyasını açın  
+4. ▶️ Projeyi derleyip çalıştırın  
 
 ---
 
 ## 🖥️ Kullanım
 
-Uygulama çalıştırıldığında `Form1` üzerinde bir `Urun` nesnesi oluşturulur.
+Uygulama çalıştırıldığında `Form1` üzerinden bir `Urun` nesnesi oluşturulur.
 
-Butonlar aracılığıyla:
-
-* 📦 Ürün bilgileri görüntülenir
-* 💰 Fiyat güncellenir
-* 📊 Stok ve kategori işlemleri yapılır
-
----
-
-## 🧱 Urun Sınıfı Yapısı
-
-```csharp
-public class Urun
-{
-    public string UrunAdi { get; set; }
-    private decimal _fiyat;
-    protected int StokMiktari;
-    internal string Kategori;
-    protected internal string Uretici;
-
-    public Urun(string ad, decimal fiyat, string kategori, int stok, string uretici)
-    {
-        UrunAdi = ad;
-        _fiyat = fiyat;
-        Kategori = kategori;
-        StokMiktari = stok;
-        Uretici = uretici;
-    }
-
-    private void FiyatGuncelle(decimal yeniFiyat)
-    {
-        _fiyat = yeniFiyat;
-    }
-
-    public string UrunBilgisiGetir()
-    {
-        return $"{UrunAdi} - {Kategori}";
-    }
-
-    protected void StokGuncelle(int yeniStok)
-    {
-        StokMiktari = yeniStok;
-    }
-
-    public void StokGuncellePublic(int yeniStok)
-    {
-        StokGuncelle(yeniStok);
-    }
-
-    internal void KategoriDegistir(string yeniKategori)
-    {
-        Kategori = yeniKategori;
-    }
-
-    protected internal void UreticiDegistir(string yeniUretici)
-    {
-        Uretici = yeniUretici;
-    }
-
-    public void FiyatGuncellePublic(decimal yeniFiyat)
-    {
-        FiyatGuncelle(yeniFiyat);
-    }
-}
-```
+Kullanıcı:
+- 📦 Ürün bilgilerini görüntüleyebilir  
+- 💰 Fiyat bilgilerini güncelleyebilir  
+- 📊 Stok ve kategori işlemlerini yapabilir  
 
 ---
 
 ## 📁 Proje Yapısı
 
-```
-Belirtecler-master/
-├── Belirtecler.csproj
-├── Belirtecler.sln
-├── Form1.Designer.cs
-├── Form1.cs
-├── Form1.resx
-├── Program.cs
-├── LICENSE
-└── README.md
-```
+- 📄 Belirtecler.csproj  
+- 📄 Belirtecler.sln  
+- 🪟 Form1 tasarım ve kod dosyaları  
+- 🚀 Program.cs  
+- 📜 LICENSE  
+- 📘 README.md  
 
 ---
 
 ## 🤝 Katkıda Bulunma
 
-Katkılarınızı memnuniyetle karşılıyoruz. Hata bildirimi veya yeni özellik önerileri için issue açabilir veya pull request gönderebilirsiniz.
+Katkılarınız memnuniyetle karşılanır. Hata bildirimi veya yeni özellik önerileri için issue açabilir veya pull request gönderebilirsiniz.
 
 ---
 
 ## 👨‍💻 Geliştirici
 
 ⭐ **Şilan Pehlivan**
-
-```
