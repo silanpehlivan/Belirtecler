@@ -2,17 +2,32 @@
 
 # C# Erişim Belirteçleri
 
-**Nesne yönelimli programlama ve kapsülleme**
+### Nesnenin davranışını kontrol et, kapsüllemeyi görünür kıl.
 
-![C#](https://img.shields.io/badge/C%23-2563eb?style=flat-square)
-![Windows Forms](https://img.shields.io/badge/Windows%20Forms-0891b2?style=flat-square)
-[![MIT License](https://img.shields.io/badge/License-MIT-16a34a?style=flat-square)](LICENSE)
+![C#](https://img.shields.io/badge/C%23-2563eb?style=for-the-badge)
+![Windows Forms](https://img.shields.io/badge/Windows%20Forms-0891b2?style=for-the-badge)
+[![MIT](https://img.shields.io/badge/MIT-16a34a?style=for-the-badge)](LICENSE)
 
 C# erişim belirteçlerinin davranışını bir ürün sınıfı ve masaüstü arayüzü üzerinden gösteren eğitim uygulaması.
+
+**Nesne yönelimli programlama ve kapsülleme**
+
+[Projeyi keşfet](https://github.com/silanpehlivan/Belirtecler/tree/master) · [Kurulum ve ayrıntılar](#projeyi-çalıştırmak-ve-incelemek)
 
 </div>
 
 ---
+
+## İçeride neler var?
+
+- **01** · public, private, protected ve internal kapsamları
+- **02** · Ürün bilgileri üzerinden sınıf etkileşimi
+- **03** · WinForms ile temel nesne yönelimli programlama
+
+## Projeyi çalıştırmak ve incelemek
+
+<details>
+<summary><strong>Kurulum, kod yapısı ve teknik notları aç</strong></summary>
 
 ## Öne Çıkanlar
 
@@ -24,21 +39,20 @@ C# erişim belirteçlerinin davranışını bir ürün sınıfı ve masaüstü a
 
 C# · Windows Forms
 
-## Teknik yaklaşım
+### Teknik yaklaşım
 
 Ürün sınıfındaki alan ve metotlar farklı erişim kapsamlarıyla tanımlanır; form olayları public metotlar üzerinden nesnenin durumunu değiştirir. Kapsülleme ile arayüz olaylarının ilişkisini gösterir.
 
-## Kodu incelemeye başlayın
+### Kodu incelemeye başlayın
 
 - [Form1.cs](Form1.cs)
 - [Program.cs](Program.cs)
 
-## Kapsam ve sınırlar
+### Kapsam ve sınırlar
 
 Erişim belirteçleri kod düzeyinde kapsülleme sağlar; kullanıcı yetkilendirmesi veya güvenlik sınırı oluşturmaz.
 
-<details>
-<summary><strong>Kurulum, kullanım ve teknik ayrıntılar</strong></summary>
+
 
 Bu proje, C# programlama dilinde kullanılan erişim belirteçlerini (`public`, `private`, `protected`, `internal`, `protected internal`) Windows Forms (WinForms) ortamında örnek bir `Urun` sınıfı üzerinden açıklayan bir uygulamadır.
 
@@ -108,6 +122,8 @@ Kullanıcı:
 Katkılarınız memnuniyetle karşılanır. Hata bildirimi veya yeni özellik önerileri için issue açabilir veya pull request gönderebilirsiniz.
 
 ---
+
+
 
 
 </details>
