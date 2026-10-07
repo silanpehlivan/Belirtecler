@@ -24,6 +24,19 @@ C# erişim belirteçlerinin davranışını bir ürün sınıfı ve masaüstü a
 
 C# · Windows Forms
 
+## Teknik yaklaşım
+
+Ürün sınıfındaki alan ve metotlar farklı erişim kapsamlarıyla tanımlanır; form olayları public metotlar üzerinden nesnenin durumunu değiştirir. Kapsülleme ile arayüz olaylarının ilişkisini gösterir.
+
+## Kodu incelemeye başlayın
+
+- [Form1.cs](Form1.cs)
+- [Program.cs](Program.cs)
+
+## Kapsam ve sınırlar
+
+Erişim belirteçleri kod düzeyinde kapsülleme sağlar; kullanıcı yetkilendirmesi veya güvenlik sınırı oluşturmaz.
+
 <details>
 <summary><strong>Kurulum, kullanım ve teknik ayrıntılar</strong></summary>
 
