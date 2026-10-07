@@ -2,138 +2,30 @@
 
 # C# Erişim Belirteçleri
 
-### Nesnenin davranışını kontrol et, kapsüllemeyi görünür kıl.
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=19&duration=3500&pause=2200&color=38bdf8&background=0D1117&center=true&vCenter=true&width=760&height=76&lines=Nesnenin%20davran%C4%B1%C5%9F%C4%B1n%C4%B1%20kontrol%20et%2C%20kaps%C3%BCllemeyi%20g%C3%B6r%C3%BCn%C3%BCr%20k%C4%B1l." alt="Nesnenin davranışını kontrol et, kapsüllemeyi görünür kıl." width="760" />
 
-![C#](https://img.shields.io/badge/C%23-2563eb?style=for-the-badge)
-![Windows Forms](https://img.shields.io/badge/Windows%20Forms-0891b2?style=for-the-badge)
-[![MIT](https://img.shields.io/badge/MIT-16a34a?style=for-the-badge)](LICENSE)
+<br />
+
+<img alt="C#" src="https://img.shields.io/badge/C%23-38bdf8?style=for-the-badge" />
+<img alt="Windows Forms" src="https://img.shields.io/badge/Windows%20Forms-2563eb?style=for-the-badge" />
+
+<br /><br />
 
 C# erişim belirteçlerinin davranışını bir ürün sınıfı ve masaüstü arayüzü üzerinden gösteren eğitim uygulaması.
 
-**Nesne yönelimli programlama ve kapsülleme**
+<br />
 
-[Projeyi keşfet](https://github.com/silanpehlivan/Belirtecler/tree/master) · [Kurulum ve ayrıntılar](#projeyi-çalıştırmak-ve-incelemek)
+**public, private, protected ve internal kapsamları** &nbsp; · &nbsp; **Ürün bilgileri üzerinden sınıf etkileşimi** &nbsp; · &nbsp; **WinForms ile temel nesne yönelimli programlama**
+
+<br /><br />
+
+[![Projeyi keşfet](https://img.shields.io/badge/PROJEYİ_KEŞFET-2563eb?style=for-the-badge)](https://github.com/silanpehlivan/Belirtecler/tree/master)
+[![Kurulum](https://img.shields.io/badge/KURULUM_&_TEKNİK_NOTLAR-334155?style=for-the-badge)](PROJECT_GUIDE.md)
 
 </div>
 
 ---
 
-## İçeride neler var?
-
-- **01** · public, private, protected ve internal kapsamları
-- **02** · Ürün bilgileri üzerinden sınıf etkileşimi
-- **03** · WinForms ile temel nesne yönelimli programlama
-
-## Projeyi çalıştırmak ve incelemek
-
-<details>
-<summary><strong>Kurulum, kod yapısı ve teknik notları aç</strong></summary>
-
-## Öne Çıkanlar
-
-- public, private, protected ve internal kapsamları
-- Ürün bilgileri üzerinden sınıf etkileşimi
-- WinForms ile temel nesne yönelimli programlama
-
-## Teknolojiler
-
-C# · Windows Forms
-
-### Teknik yaklaşım
-
-Ürün sınıfındaki alan ve metotlar farklı erişim kapsamlarıyla tanımlanır; form olayları public metotlar üzerinden nesnenin durumunu değiştirir. Kapsülleme ile arayüz olaylarının ilişkisini gösterir.
-
-### Kodu incelemeye başlayın
-
-- [Form1.cs](Form1.cs)
-- [Program.cs](Program.cs)
-
-### Kapsam ve sınırlar
-
-Erişim belirteçleri kod düzeyinde kapsülleme sağlar; kullanıcı yetkilendirmesi veya güvenlik sınırı oluşturmaz.
-
-
-
-Bu proje, C# programlama dilinde kullanılan erişim belirteçlerini (`public`, `private`, `protected`, `internal`, `protected internal`) Windows Forms (WinForms) ortamında örnek bir `Urun` sınıfı üzerinden açıklayan bir uygulamadır.
-
----
-
-## Özellikler
-
-- **public:** Her yerden erişilebilir üyeler
-- **private:** Sadece tanımlandığı sınıf içinden erişilebilir üyeler
-- **protected:** Sınıf ve türetilmiş sınıflar tarafından erişilebilir üyeler
-- **internal:** Aynı proje (assembly) içinden erişilebilir üyeler
-- **protected internal:** Aynı assembly içinden veya türetilmiş sınıflardan erişilebilir üyeler
-- **Örnek Kullanım:** `Urun` sınıfı üzerinden erişim belirteçlerinin davranışı gösterilmektedir
-
----
-
-## Teknik Detaylar
-
-- Dil: C#
-- Arayüz: Windows Forms (WinForms)
-- Yapı: Nesne Yönelimli Programlama (OOP)
-
----
-
-## Kazanımlar
-
-- Kapsülleme (Encapsulation) mantığını öğrenme
-- Erişim belirteçlerinin kullanım farklarını anlama
-- WinForms ile sınıf etkileşimi kurma
-- .NET proje yapısını tanıma
-
----
-
-## Kurulum
-
-1.  Projeyi klonlayın veya ZIP olarak indirin  
-2.  Proje klasörüne girin  
-3.  Visual Studio ile `.sln` dosyasını açın  
-4.  Projeyi derleyip çalıştırın  
-
----
-
-## Kullanım
-
-Uygulama çalıştırıldığında `Form1` üzerinden bir `Urun` nesnesi oluşturulur.
-
-Kullanıcı:
-- Ürün bilgilerini görüntüleyebilir  
-- Fiyat bilgilerini güncelleyebilir  
-- Stok ve kategori işlemlerini yapabilir  
-
----
-
-## Proje Yapısı
-
-- Belirtecler.csproj  
-- Belirtecler.sln  
-- Form1 tasarım ve kod dosyaları  
-- Program.cs  
-- LICENSE  
-- README.md  
-
----
-
-## Katkıda Bulunma
-
-Katkılarınız memnuniyetle karşılanır. Hata bildirimi veya yeni özellik önerileri için issue açabilir veya pull request gönderebilirsiniz.
-
----
-
-
-
-
-</details>
-
----
-
 <div align="center">
-
-**© 2024 Şilan PEHLİVAN**
-
-Bu proje MIT lisansı kapsamında sunulmaktadır. Kullanım ve dağıtım koşulları: [LICENSE](LICENSE).
-
+<sub>© 2024 Şilan PEHLİVAN · <a href="LICENSE">MIT lisansı</a></sub>
 </div>
